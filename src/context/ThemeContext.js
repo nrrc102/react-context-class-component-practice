@@ -1,4 +1,4 @@
-import React,{Component, createContext} from 'react';
+import React,{Component, createContext, useState} from 'react';
 
 export const ThemeContext = createContext();
 
@@ -22,4 +22,22 @@ class ThemeContextProvider extends Component{
     }
 }
 
-export default ThemeContextProvider
+// const ThemeContextProvider = (props) => {
+//     const [theme, setTheme] = useState({
+//         isLightTheme: true,
+//         light: {syntax: '#555', ui: '#ddd', bg: '#eee'},
+//         dark: {syntax: '#ddd', ui: '#333', bg: '#555'}
+//     })
+
+//     const toggleTheme = () => {
+//         setTheme(!theme);
+//     }
+
+//     return(
+//         <ThemeContext.Provider value={{...theme, toggleTheme}}>
+//             {props.children}
+//         </ThemeContext.Provider>
+//     )
+// }
+
+export default ThemeContextProvider;
