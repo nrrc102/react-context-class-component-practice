@@ -1,12 +1,15 @@
 import React from 'react';
 import Booklist from './components/Booklist';
 import Navbar from './components/Navbar';
+import ThemeContextProvider from './context/ThemeContext';
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-      <Booklist/>
+      <ThemeContextProvider>
+        <Navbar/>
+        <Booklist/>
+      </ThemeContextProvider>
     </div>
   );
 }
